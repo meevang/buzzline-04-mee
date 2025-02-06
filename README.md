@@ -2,14 +2,9 @@
 
 We can analyze and visualize different types of streaming data as the information arrives.
 
-The producers don't change from buzzline-03-case - they write the same information to a Kafka topic, except the csv producer for the smart smoker has been modified to not run continuously. It will stop after reading all the rows in the CSV file. 
-The consumers have been enhanced to add visualization. 
-
 This project uses matplotlib and its animation capabilities for visualization. 
 
-The basic producer and consumer will:
-a. show the distribution of message lengths between authors,
-b. show interactions between authors.
+The basic producer and consumer will show interactions between author and category.  It will monitor JSON messages that contain author and category.  Each message represents an interaction between an author and a category, which is represented as an edge in the network.  The matplotlib library dynamically updates a plot showing the network of authors interacting with categories, with edge weights indicating the frequency of interactions.  This results in a live-updating network graph that visualizes the relationships between authors and categories based on the messages received, with the graph being continuously updated to reflect the latest data.
 
 
 ## Task 1. Use Tools from Module 1 and 2
@@ -63,13 +58,13 @@ Windows:
 
 ```shell
 .venv\Scripts\activate
-py -m producers.basic_json_producer_case
+py -m producers.project_producer_case
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.basic_json_producer_case
+python3 -m producers.project_producer_case
 ```
 
 ### Consumer Terminal
@@ -82,13 +77,13 @@ Use the commands below to activate .venv, and start the consumer.
 Windows:
 ```shell
 .venv\Scripts\activate
-py -m consumers.basic_json_consumer_case
+py -m consumers.project_consumer_mee
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.basic_json_consumer_case
+python3 -m consumers.project_consumer_mee
 ```
 
 ### Review the Application Code
