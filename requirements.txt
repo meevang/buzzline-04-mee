@@ -108,6 +108,9 @@ matplotlib
 # Statistical data visualization library built on matplotlib (~2-5 MB)
 seaborn
 
+# Python library designed for the creation, manipulation, and study of complex networks (graphs).
+networkx
+
 # Interactive plotting library, often used with Shiny apps (~20-25 MB)
 #plotly
 
